@@ -10,10 +10,12 @@ DB = [
     content: "Eventually the guys with real ideas not running a scam on the world will overcome. I used an exclamation just to be an asshole and also to make a point! LOL Young Thug is super inspiring to me. Amazing artist!!! I also wanted to point out that it’s the first album to go number 1 off of streaming!!! ",
     photo: "https://unsplash.it/600?image=1",
     rating: "2"
+
   },
   {
     title: "Tout sur mon chat",
     content: "also to Kim’s hair and makeup Lorraine jewelry and the whole style squad at Balmain and the Yeezy team. When companies doubt me they doubt us. Wes daytime",
+    photo: "https://unsplash.it/600?image=4",
     rating: "4"
   },
   {
@@ -31,9 +33,25 @@ DB = [
 
 
 COMMENTS = [
-  ["super", "cool!", "bien écrit", "first!", "why is everyone speaking French here?"],
-  ["J'ai préféré l'autre article", "je n'ai pas vraiment compris le deuxième paragraphe", "une suite?"],
-  ["A revoir", "Découvrez ma page Facebook! @Kamsoerzi"],
-  ["Nul"],
-  ["J'ai adoré mais j'aurais préféré qu'elle finisse avec John", "good article", "Ajouté dans mes favoris!"]
+  [
+    {comm:"super", user: "Samy"}, {comm:"cool!", user: "Eléonore"}, 
+    {comm:"bien écrit", user: "Roukia"}, {comm:"first!", user:"Paul"},
+    {comm:"why is everyone speaking French here?", user:"Inconnu"}
+  ],
+  [
+    {comm:"J'ai préféré l'autre article", user:"dév du 95"},
+    {comm:"je n'ai pas vraiment compris le deuxième paragraphe", user:"Thomas"},
+    {comm:"une suite?", user:"Titi"}
+  ],
+  [
+    {comm:"A revoir", user:"Inconnu"}, 
+    {comm:"Découvrez ma page Facebook! @Kamsoerzi", user:"Kam"}
+  ],
+  [
+    {comm:"Nul", user:"Inconnu"}
+  ],
+  [
+    {comm:"J'ai adoré mais j'aurais préféré qu'elle finisse avec John", user:"Mhaza"},
+    {comm:"good article", user:"Inconnu"}, {comm:"Ajouté dans mes favoris!", user:"Julien"}
+  ]
 ]

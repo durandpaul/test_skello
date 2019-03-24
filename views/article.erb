@@ -1,0 +1,76 @@
+
+<div class="row text-left">
+  <a href="/" class="btn btn-warning text-left" stlye="width: 50%:">Retour Accueil</a>
+</div>
+<div id="article" class="row">
+  <div class="col- col-sm-3 col-md-3 col-lg-3">
+  </div>
+  <div class="col- col-sm-5 col-md-5 col-lg-5">
+    <div id="bord" class="text-left"> 
+      <article id="art" >
+        <label > Rédigé par Jean </label>
+        <h2 id="nameArt"> <%= @theArticle[:title] %></h2>
+        <p class="text-left text-justify" id="content"> <%= @theArticle[:content] %></p>
+        <small>Publié le 24 avril 2019 </small>
+      </article>
+      <div id="commentZone" class="text-left ">
+        <h4>Commentaires :</h4>
+        <div class="list-group">
+          <% @commentList.each do | comment| %>
+              <a href="#" class="list-group-item ">
+                <div class="d-flex w-100 justify-content-between">
+                  <label for="titreComment">Titre du commentaire</label>
+                </div>
+                <p> <%= comment[:comm] %> </p>
+                <small> auteur: <%= comment[:user] %> </small>
+              </a>
+          <% end %>
+        </div>
+        <div id="newCom">  
+          <h5>Un commentaire ?</h5>
+          <form class="was-validated" method="POST" action ='/addComm' >
+            <div  >
+              <input type="text" class="form-control form-control-sm" id="inputPseudo" name="pseudo" placeholder="pseudo">
+              <br>
+              <textarea class="form-control form-control-sm is-invalid" id="validationTextarea" name="content" placeholder="écrivez quelque chose à l'adresse de l'auteur" required></textarea>
+              <input type="hidden" name="id" value="<%= @index %>">
+            </div>
+              <br>
+            <input type="submit" class="btn btn-success">
+          </form>
+          </div>
+        </div>
+    </div> 
+</div>
+<div  class="col- col-sm-4 col-md-4 col-lg-4">
+    <div id="otherArt">
+      <div class="list-group">
+        <h3>Articles par le même auteur </h3>
+        <a href="/article/1" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          <small>Donec id elit non mi porta.</small>
+        </a>
+        <a href="/article/2" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          <small class="text-muted">Donec id elit non mi porta.</small>
+        </a>
+        <a href="/article/3" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          <small class="text-muted">Donec id elit non mi porta.</small>
+        </a>
+      </div>      
+    </div>  
+  </div>
+</div>

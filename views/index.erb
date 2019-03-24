@@ -1,0 +1,29 @@
+  <header class="text-center" >
+    <h1>Bienvenue sur Mon blooog !</h1>
+  </header>
+<div class="row">
+  <% @articleList.each_with_index do |post, index| %>
+  <div class="col- col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div id='cardArt' class="card">
+      <div class="card-header">
+        <h4 class="card-title"><%= post[:title] %></h4>      
+        <h6 class="card-subtitle mb-2 text-muted"> <span class="badge badge-info"> Noté: <%= post[:rating] %> <i class="fa fa-star " aria-hidden="true"></i></span> </h6>
+      </div>
+      <div class="card-body ">
+        <% if post[:photo] %>
+          <img src="<%= post[:photo] %>" class="img-thumbnail" alt="...">
+        <% else %>
+          <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="card-footer">
+        <a href="/article/<%= index %>" class="btn btn-primary">Lire l'article </a>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

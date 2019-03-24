@@ -1,0 +1,51 @@
+html, body {
+    background-color: rgb(119, 99, 73);
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: whitesmoke;
+}
+
+#commentZone {
+    padding-top: 10px;
+    border-top:  2px ridge black;
+}
+
+#article {
+    margin-top: 20px;
+}
+
+#otherArt {
+    margin-left: 20px;
+    background-color: rgb(71, 66, 66);
+    color: antiquewhite
+}
+
+#art {
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+#nameArt {
+    margin-bottom: 15px;
+}
+
+li {
+    list-style: none;
+}
+
+#newCom {
+    padding-top: 18px;
+    border-top:  1px ridge black;
+}
+
+#bord {
+    /* border: 2px ridge black; */
+    background-color: rgb(230, 223, 213);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px; 
+}
